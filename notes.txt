@@ -1,0 +1,45 @@
+Anexo
+
+HTML:
+
+- O comando "defer" na tag script serve para esperar o conteúdo ser carregado antes de rodar o java script. utiliza-se quando o script está no head
+
+- O comando "required" na tag input indica que esta tag precisa ser preenchida obrigatoriamente pelo usuário
+
+CSS:
+
+- As variáveis contidas no seletor ":root" ficam disponíveis globalmente
+
+- A propriedade "position: relative" no seletor "div.input" é colocado porque colocamos a tag "label" em "position: absolute", que é referente à página inteira. Então, quando eu coloco a "div.input" como "relative", a "label" vai ficar "absolute" em relação à própria "div.input", porque "label" é sua tag filha
+
+- A propriedade "outline: none" no seletor "input, button" tira a borda que aparece quando o input é selecionado pelo usuário
+
+- No seletor "input ~ label" o comando "~" significa que eu estou procurando o "irmão" do "input" que é o "label" e aplicando as propriedades nele.
+
+- O seletor "input:focus ~ label" diz que quando o usuário clicar no input, ele vai procurar o irmão do input, que no caso é o "label", e vai aplicar as propridades nele, que é um "transform" com tempo de transição indicado anteriormente.
+
+- O seletor "input:valid ~ label" diz que quando o campo for válido, ou seja, quando tiver algo escrito e tirar o "focus", as propriedades ainda vão valer, ou seja, a "label" ainda ficará deslocada.
+
+- A propriedade "letter-spacing: 0.1em" coloca um espaçamento entre as letras da "label" quando o "input" é selecionado
+
+- As propriedades do seletor ".input span.error.active" são aplicadas quando o elemento "error" estiver ativo (active é uma classe), ou seja, quando tiver alguma mensagem escrita dentro da tag "span" de classe "error". esta mensagem será adicionada pelo java script
+
+Java Script:
+
+- A propriedade "target" do "event" refere-se ao alvo que disparou o evento, que no caso foi o objeto "field"
+
+- O evento "invalid" é vinculado ao "required"
+
+- Se a aplicação enviasse o formulário, a página seria recarregada, o que não se deseja, por isso aplica-se o "event.preventDefault"
+
+- "for of" itera listas (no caso, uma lista com os campos que possuem 'required').
+
+- "for in" itera propriedades de um objeto (no caso, o objeto field que é o campo em si)
+
+- field.validity[error] -> key/valor da propriedade/chave
+
+- O bubble só existe no evento "invalid". Por isso, não faz sentido deixar o preventDefault() na customValidation geral
+
+- Na função customMessage(), ela assume que somente terão campos de texto e email. porém se tiver outro campo, preciso adicionar como chave no objeto messages, senão vai dar erro
+
+
